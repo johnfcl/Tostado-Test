@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "94b38a82-fecc-437f-9570-2f0be258899e",
+		"name": "GestionDocumentalTostao API",
+		"description": "Colección de pruebas para el Sistema de Gestión Documental",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2439517",
+		"_collection_link": "https://winter-satellite-802783.postman.co/workspace/Meli~3024e39b-7aec-492d-bb99-5512f0d238d3/collection/2439517-94b38a82-fecc-437f-9570-2f0be258899e?action=share&source=collection_link&creator=2439517"
+	},
+	"item": [
+		{
+			"name": "Documentos - Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Informe de Ventas Q3 2024\",\n  \"autor\": \"Carlos Pérez\",\n  \"tipo\": \"Informe\",\n  \"rutaArchivo\": \"/files/informe_q3_2024.pdf\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/documentos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Listar todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos?pageNumber=1&pageSize=10",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos"
+					],
+					"query": [
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Obtener por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/{{documento_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"{{documento_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"titulo\": \"Informe de Ventas Q3 2024 - ACTUALIZADO\",\n  \"autor\": \"Carlos Pérez Modificado\",\n  \"tipo\": \"Informe\",\n  \"rutaArchivo\": \"/files/informe_q3_2024_v2.pdf\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/api/documentos/{{documento_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"{{documento_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/{{documento_id}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"{{documento_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Buscar por Autor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/buscar?autor=Carlos Pérez",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "autor",
+							"value": "Carlos Pérez"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Buscar por Tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/buscar?tipo=Contrato",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "tipo",
+							"value": "Contrato"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Buscar por Estado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/buscar?estado=Validado",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "Validado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Documentos - Buscar combinada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/documentos/buscar?autor=Ana Gómez&tipo=Contrato&estado=Validado",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"documentos",
+						"buscar"
+					],
+					"query": [
+						{
+							"key": "autor",
+							"value": "Ana Gómez"
+						},
+						{
+							"key": "tipo",
+							"value": "Contrato"
+						},
+						{
+							"key": "estado",
+							"value": "Validado"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stored Procedure - Reporte Autor y Tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/reportes/autor-tipo",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"reportes",
+						"autor-tipo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"requests": {},
+				"exec": [
+					"console.log('Iniciando request...');"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"requests": {},
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test(\"Response time is acceptable\", function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(1000);",
+					"});"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://localhost:7001"
+		},
+		{
+			"key": "documento_id",
+			"value": ""
+		}
+	]
+}

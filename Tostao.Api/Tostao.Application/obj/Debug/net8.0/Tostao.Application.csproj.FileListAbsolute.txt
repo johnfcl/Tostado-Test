@@ -1,0 +1,15 @@
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\bin\Debug\net8.0\Tostao.Application.deps.json
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\bin\Debug\net8.0\Tostao.Application.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\bin\Debug\net8.0\Tostao.Application.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\bin\Debug\net8.0\Tostao.Domain.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\bin\Debug\net8.0\Tostao.Domain.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.csproj.AssemblyReference.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.AssemblyInfoInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.AssemblyInfo.cs
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.csproj.CoreCompileInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.A.21DD6D77.Up2Date
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\refint\Tostao.Application.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\Tostao.Application.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Application\obj\Debug\net8.0\ref\Tostao.Application.dll

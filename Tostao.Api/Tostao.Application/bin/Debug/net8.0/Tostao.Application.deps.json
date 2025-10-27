@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Tostao.Application/1.0.0": {
+        "dependencies": {
+          "Tostao.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Tostao.Application.dll": {}
+        }
+      },
+      "Tostao.Domain/1.0.0": {
+        "runtime": {
+          "Tostao.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tostao.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tostao.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

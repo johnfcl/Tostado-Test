@@ -1,0 +1,17 @@
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Infraestructure.deps.json
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Infraestructure.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Infraestructure.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Application.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Domain.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Application.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\bin\Debug\net8.0\Tostao.Domain.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.csproj.AssemblyReference.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.AssemblyInfoInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.AssemblyInfo.cs
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.I.D8AE33FC.Up2Date
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\refint\Tostao.Infraestructure.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\Tostao.Infraestructure.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Infraestructure\obj\Debug\net8.0\ref\Tostao.Infraestructure.dll

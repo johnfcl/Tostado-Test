@@ -1,0 +1,172 @@
+<div class="documentos-container">
+    <h2>{{ appName }}</h2>
+
+    @if (success) {
+    <div class="alert alert-success">
+        {{ success }}
+        <button type="button" class="btn-close" (click)="success = ''"></button>
+    </div>
+    } @if (!apiConnected && error) {
+    <div class="alert alert-warning">
+        <h4>⚠️ API no disponible</h4>
+        <p>{{ error }}</p>
+        <button class="btn btn-sm btn-outline-warning" (click)="checkApiConnection()">
+        Reintentar conexión
+      </button>
+    </div>
+    } @if (apiConnected) {
+    <div class="card mb-4">
+        <div class="card-header">
+            <h5>Crear Nuevo Documento</h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-2">
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Título *" [(ngModel)]="nuevoDocumento.titulo" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Autor *" [(ngModel)]="nuevoDocumento.autor" required>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select" [(ngModel)]="nuevoDocumento.tipo" required>
+              <option value="">Tipo *</option>
+              <option *ngFor="let tipo of tipos" [value]="tipo">{{tipo}}</option>
+            </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Descripción" [(ngModel)]="nuevoDocumento.descripcion">
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-success w-100" (click)="crearNuevoDocumento()" [disabled]="loading">
+              {{ loading ? '...' : 'Crear' }}
+            </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (enableSearch) {
+    <div class="filtros-section">
+        <div class="row g-2">
+            <div class="col-md-4">
+                <input type="text" class="form-control" placeholder="Buscar por autor..." [(ngModel)]="searchTerm" (input)="onSearchChange()">
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" [(ngModel)]="selectedTipo" (change)="onSearchChange()">
+              <option value="">Todos los tipos</option>
+              <option *ngFor="let tipo of tipos" [value]="tipo">{{tipo}}</option>
+            </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select" [(ngModel)]="selectedEstado" (change)="onSearchChange()">
+              <option value="">Todos los estados</option>
+              <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
+            </select>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <button class="btn btn-secondary" (click)="limpiarFiltros()">Limpiar Filtros</button>
+                <button class="btn btn-primary" (click)="loadDocumentos()">Recargar</button>
+            </div>
+        </div>
+    </div>
+    } @if (error && !loading) {
+    <div class="alert alert-danger error-alert">
+        {{ error }}
+        <button type="button" class="btn-close" (click)="error = ''"></button>
+    </div>
+    } @if (modoEdicion && documentoEditando) {
+    <div class="modal-backdrop show"></div>
+    <div class="modal show d-block" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Documento</h5>
+                    <button type="button" class="btn-close" (click)="cancelarEdicion()"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Título *</label>
+                        <input type="text" class="form-control" [(ngModel)]="documentoEditando.titulo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Descripción</label>
+                        <textarea class="form-control" [(ngModel)]="documentoEditando.descripcion"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Autor *</label>
+                        <input type="text" class="form-control" [(ngModel)]="documentoEditando.autor" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tipo *</label>
+                        <select class="form-select" [(ngModel)]="documentoEditando.tipo" required>
+                  <option *ngFor="let tipo of tipos" [value]="tipo">{{tipo}}</option>
+                </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Estado</label>
+                        <select class="form-select" [(ngModel)]="documentoEditando.estado">
+                  <option *ngFor="let estado of estados" [value]="estado">{{estado}}</option>
+                </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="cancelarEdicion()">Cancelar</button>
+                    <button type="button" class="btn btn-primary" (click)="guardarEdicion()" [disabled]="loading">
+                {{ loading ? 'Guardando...' : 'Guardar' }}
+              </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    } @if (loading && !modoEdicion) {
+    <div class="loading-spinner">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando documentos...</p>
+    </div>
+    } @if (!loading && documentos.length > 0) {
+    <div class="row">
+        @for (documento of documentos; track documento.id) {
+        <div class="col-md-6 mb-3">
+            <div class="card documento-card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <h5 class="card-title">{{ documento.titulo }}</h5>
+                        <span [class]="'badge ' + getEstadoBadgeClass(documento.estado)">
+                    {{ documento.estado }}
+                  </span>
+                    </div>
+                    <p class="card-text">{{ documento.descripcion }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                    <i [class]="getTipoIcon(documento.tipo)"></i>
+                    {{ documento.tipo }} • {{ documento.autor }}
+                  </small>
+                        <div>
+                            <button class="btn btn-sm btn-outline-warning me-1" (click)="editarDocumento(documento)">
+                      <i class="bi bi-pencil"></i> Editar
+                    </button>
+                            <button class="btn btn-sm btn-outline-danger me-1" (click)="eliminarDocumento(documento)">
+                      <i class="bi bi-trash"></i> Eliminar
+                    </button>
+                            <button class="btn btn-sm btn-outline-primary" (click)="verDetalles(documento)">
+                      <i class="bi bi-eye"></i> Ver
+                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    } @if (!loading && documentos.length === 0 && !error) {
+    <div class="no-documents">
+        <i class="bi bi-folder-x" style="font-size: 3rem;"></i>
+        <h4>No se encontraron documentos</h4>
+        <p>No hay documentos que coincidan con los criterios de búsqueda.</p>
+    </div>
+    } }
+</div>

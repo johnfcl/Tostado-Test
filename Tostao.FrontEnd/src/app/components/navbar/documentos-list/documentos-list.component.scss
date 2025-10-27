@@ -1,0 +1,108 @@
+.documentos-container {
+    padding: 20px;
+    h2 {
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+}
+
+// Mejoras para los modales
+.modal-backdrop {
+    opacity: 0.5;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-radius: 12px 12px 0 0;
+    .modal-title {
+        font-weight: 600;
+    }
+}
+
+// Mejoras para las tarjetas de documentos
+.documento-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+    .card-body {
+        padding: 1.5rem;
+    }
+}
+
+// Mejoras para los badges
+.badge {
+    font-size: 0.75em;
+    padding: 0.5em 0.75em;
+    border-radius: 6px;
+    &.bg-primary {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+    }
+    &.bg-success {
+        background: linear-gradient(135deg, #28a745, #1e7e34);
+    }
+    &.bg-warning {
+        background: linear-gradient(135deg, #ffc107, #e0a800);
+    }
+    &.bg-secondary {
+        background: linear-gradient(135deg, #6c757d, #545b62);
+    }
+}
+
+// Mejoras para los botones
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    &:hover {
+        transform: translateY(-1px);
+    }
+}
+
+// Estilos para el formulario de filtros
+.filtros-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dee2e6;
+}
+
+// Estilos para el estado de carga
+.loading-spinner {
+    text-align: center;
+    padding: 60px 20px;
+    .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        border-width: 0.3em;
+    }
+}
+
+// Estilos para cuando no hay documentos
+.no-documents {
+    text-align: center;
+    padding: 80px 20px;
+    color: #6c757d;
+    i {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        display: block;
+        opacity: 0.7;
+    }
+    h4 {
+        color: #495057;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+}

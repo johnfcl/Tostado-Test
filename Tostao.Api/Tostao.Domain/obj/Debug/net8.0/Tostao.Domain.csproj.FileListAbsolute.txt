@@ -1,0 +1,11 @@
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\bin\Debug\net8.0\Tostao.Domain.deps.json
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\bin\Debug\net8.0\Tostao.Domain.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\bin\Debug\net8.0\Tostao.Domain.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.AssemblyInfoInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.AssemblyInfo.cs
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.csproj.CoreCompileInputs.cache
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\refint\Tostao.Domain.dll
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\Tostao.Domain.pdb
+C:\Dev\Tostao\Tostao.Api\Tostao.Domain\obj\Debug\net8.0\ref\Tostao.Domain.dll

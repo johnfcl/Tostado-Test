@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>{{ environment.appName }}</h1>
+
+    <div class="status">
+        <span class="text-muted">Modo: {{ environment.production ? 'Producción' : 'Desarrollo' }}</span>
+    </div>
+
+    <small class="text-muted">API: {{ environment.apiUrl }}</small>
+
+    <div class="config-info">
+        <small>Tamaño de página: {{ environment.pageSize }}</small>
+        <small>Búsqueda habilitada: {{ environment.enableSearch ? 'Sí' : 'No' }}</small>
+    </div>
+</div>
